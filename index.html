@@ -15,9 +15,14 @@
   </head>
   <body>
 	<a-scene>
-      
+      <a-assets>
+      	<img id="ground" src="assets/img/checker.png">
+      </a-assets>
+
+      	<a-plane src="#ground" height="100" width="100" rotation="-90 0 0"></a-plane>
+      	
 		<a-entity bmfont-text="text: Hello world"></a-entity>
-      
+
     </a-scene>
   </body>
 </html>
