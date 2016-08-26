@@ -15,6 +15,7 @@
       <a-assets>
         <a-asset-item id="shirt1" src="assets/dae/shirt.dae">
         <img id="logo1" src="assets/img/shoptitle.png">
+        <a-mixin id="detailblock" geometry="primitive: box; height: 2; width: 3.5; depth: 0.25"></a-mixin>
       </a-assets>
 
       <!---->
@@ -31,7 +32,7 @@
         <a-animation attribute="scale" to="0.04 0.04 0.04" begin="mouseup" dur="300" fill="both" easing="ease-out"></a-animation>
       </a-collada-model>
 
-      <a-box color="orange" height="2" width="3.5" depth="0.25" position="9.25 1.75 -4"></a-box>
+      <a-entity mixin="detailblock" posotion="9.25 1.75 -4"></a-entity>
 
       <!---->
 
