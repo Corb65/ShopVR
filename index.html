@@ -10,12 +10,12 @@
 
 </head>
 <body>
-<a-scene>
+<a-scene antialias="true">
 
       <a-assets>
         <a-asset-item id="shirt1" src="assets/dae/shirt.dae">
         <img id="logo1" src="assets/img/shoptitle.png">
-        <img id="ground" src="assets/img/floor.png">
+        <img id="ground" src="assets/img/wood.jpg">
         <a-mixin id="detailblock" geometry="primitive: box; height: 2; width: 3.5; depth: 0.25"></a-mixin>
       </a-assets>
 
@@ -29,8 +29,8 @@
         <a-animation attribute="position" to="0 0.5 -3" begin="mousedown" dur="300" fill="both" easing="ease-out"></a-animation>
         <a-animation attribute="scale" to="0.12 0.12 0.12" begin="mousedown" dur="300" fill="both" easing="ease-out"></a-animation>
 
-        <a-animation attribute="position" to="5.75 0.5 -4" begin="mouseup" dur="300" fill="both" easing="ease-out"></a-animation>
-        <a-animation attribute="scale" to="0.04 0.04 0.04" begin="mouseup" dur="300" fill="both" easing="ease-out"></a-animation>
+        <a-animation attribute="position" to="5.75 0.5 -4" begin="mouseleave" dur="300" fill="both" easing="ease-out"></a-animation>
+        <a-animation attribute="scale" to="0.04 0.04 0.04" begin="mouseleave" dur="300" fill="both" easing="ease-out"></a-animation>
       </a-collada-model>
       <a-entity mixin="detailblock" position="9.25 1.75 -4"></a-entity>
 
@@ -40,8 +40,8 @@
         <a-animation attribute="position" to="0 0.5 -3" begin="mousedown" dur="300" fill="both" easing="ease-out"></a-animation>
         <a-animation attribute="scale" to="0.12 0.12 0.12" begin="mousedown" dur="300" fill="both" easing="ease-out"></a-animation>
 
-        <a-animation attribute="position" to="5.75 3.5 -4" begin="mouseup" dur="300" fill="both" easing="ease-out"></a-animation>
-        <a-animation attribute="scale" to="0.04 0.04 0.04" begin="mouseup" dur="300" fill="both" easing="ease-out"></a-animation>
+        <a-animation attribute="position" to="5.75 3.5 -4" begin="mouseleave" dur="300" fill="both" easing="ease-out"></a-animation>
+        <a-animation attribute="scale" to="0.04 0.04 0.04" begin="mouseleave" dur="300" fill="both" easing="ease-out"></a-animation>
       </a-collada-model>
       <a-entity mixin="detailblock" position="9.25 4.75 -4"></a-entity>
 
@@ -51,8 +51,8 @@
         <a-animation attribute="position" to="0 0.5 -3" begin="mousedown" dur="300" fill="both" easing="ease-out"></a-animation>
         <a-animation attribute="scale" to="0.12 0.12 0.12" begin="mousedown" dur="300" fill="both" easing="ease-out"></a-animation>
 
-        <a-animation attribute="position" to="-1.25 0.5 -4" begin="mouseup" dur="300" fill="both" easing="ease-out"></a-animation>
-        <a-animation attribute="scale" to="0.04 0.04 0.04" begin="mouseup" dur="300" fill="both" easing="ease-out"></a-animation>
+        <a-animation attribute="position" to="-1.25 0.5 -4" begin="mouseleave" dur="300" fill="both" easing="ease-out"></a-animation>
+        <a-animation attribute="scale" to="0.04 0.04 0.04" begin="mouseleave" dur="300" fill="both" easing="ease-out"></a-animation>
       </a-collada-model>
       <a-entity mixin="detailblock" position="2.25 1.75 -4"></a-entity>
 
@@ -62,8 +62,8 @@
         <a-animation attribute="position" to="0 0.5 -3" begin="mousedown" dur="300" fill="both" easing="ease-out"></a-animation>
         <a-animation attribute="scale" to="0.12 0.12 0.12" begin="mousedown" dur="300" fill="both" easing="ease-out"></a-animation>
 
-        <a-animation attribute="position" to="-1.25 3.5 -4" begin="mouseup" dur="300" fill="both" easing="ease-out"></a-animation>
-        <a-animation attribute="scale" to="0.04 0.04 0.04" begin="mouseup" dur="300" fill="both" easing="ease-out"></a-animation>
+        <a-animation attribute="position" to="-1.25 3.5 -4" begin="mouseleave" dur="300" fill="both" easing="ease-out"></a-animation>
+        <a-animation attribute="scale" to="0.04 0.04 0.04" begin="mouseleave" dur="300" fill="both" easing="ease-out"></a-animation>
       </a-collada-model>
       <a-entity mixin="detailblock" position="2.25 4.75 -4"></a-entity>
 
@@ -73,8 +73,8 @@
         <a-animation attribute="position" to="0 0.5 -3" begin="mousedown" dur="300" fill="both" easing="ease-out"></a-animation>
         <a-animation attribute="scale" to="0.12 0.12 0.12" begin="mousedown" dur="300" fill="both" easing="ease-out"></a-animation>
 
-        <a-animation attribute="position" to="-9.25 0.5 -4" begin="mouseup" dur="300" fill="both" easing="ease-out"></a-animation>
-        <a-animation attribute="scale" to="0.04 0.04 0.04" begin="mouseup" dur="300" fill="both" easing="ease-out"></a-animation>
+        <a-animation attribute="position" to="-9.25 0.5 -4" begin="mouseleave" dur="300" fill="both" easing="ease-out"></a-animation>
+        <a-animation attribute="scale" to="0.04 0.04 0.04" begin="mouseleave" dur="300" fill="both" easing="ease-out"></a-animation>
       </a-collada-model>
       <a-entity mixin="detailblock" position="-5.25 1.75 -4"></a-entity>
 
@@ -84,8 +84,8 @@
         <a-animation attribute="position" to="0 0.5 -3" begin="mousedown" dur="300" fill="both" easing="ease-out"></a-animation>
         <a-animation attribute="scale" to="0.12 0.12 0.12" begin="mousedown" dur="300" fill="both" easing="ease-out"></a-animation>
 
-        <a-animation attribute="position" to="-9.25 3.5 -4" begin="mouseup" dur="300" fill="both" easing="ease-out"></a-animation>
-        <a-animation attribute="scale" to="0.04 0.04 0.04" begin="mouseup" dur="300" fill="both" easing="ease-out"></a-animation>
+        <a-animation attribute="position" to="-9.25 3.5 -4" begin="mouseleave" dur="300" fill="both" easing="ease-out"></a-animation>
+        <a-animation attribute="scale" to="0.04 0.04 0.04" begin="mouseleave" dur="300" fill="both" easing="ease-out"></a-animation>
       </a-collada-model>
       <a-entity mixin="detailblock" position="-5.25 4.75 -4"></a-entity>
 
