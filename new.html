@@ -1,0 +1,61 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>ShopVR via A-Frame</title>
+
+    <!-- Development Version, Uncompressed with Source Maps -->
+    <script src="https://aframe.io/releases/0.3.0/aframe.js"></script>
+    <!-- A Frame text geometry component -->
+    <script src="https://rawgit.com/ngokevin/aframe-text-component/master/dist/aframe-text-component.min.js"></script>
+
+</head>
+<body>
+<a-scene antialias="true">
+
+      <a-assets>
+        <a-asset-item id="shirt1" src="assets/dae/shirt.dae">
+        <img id="logo1" src="assets/img/shoptitle.png">
+        <img id="ground" src="assets/img/wood.jpg">
+        <a-mixin id="detailblock" geometry="primitive: box; height: 2; width: 3.5; depth: 0.25"></a-mixin>
+      </a-assets>
+
+      <!---->
+
+      <a-image src="#logo1" position="0 9 -4" width="8" height="3"></a-image>
+      <a-entity position="0 12 -4" text="text: Welcome to ShopVR"></a-entity>
+
+      <!---->
+
+      <a-entity mixin="detailblock" position="9.25 1.75 -4"></a-entity>
+
+      <!---->
+
+      <a-entity mixin="detailblock" position="9.25 4.75 -4"></a-entity>
+
+      <!---->
+
+      <a-entity mixin="detailblock" position="2.25 1.75 -4"></a-entity>
+
+      <!---->
+
+      <a-entity mixin="detailblock" position="2.25 4.75 -4"></a-entity>
+
+      <!---->
+
+      <a-plane rotation="-90 0 0" width="30" height="30" src="#ground" repeat="10"></a-plane>
+
+      <a-sky color="#CCF5FF"></a-sky>
+
+      <a-entity position="0 2 3.8">
+        <a-camera>
+          <a-cursor color="#FF5D00" shader="flat" fuse="false">
+            <a-animation begin="fusing" easing="linear" attribute="scale" fill="backwards" from="0.1 0.1 0.1" to="1 1 1"></a-animation>
+          </a-cursor>
+        </a-camera>
+      </a-entity>
+
+    </a-scene>
+</body>
+</html>
