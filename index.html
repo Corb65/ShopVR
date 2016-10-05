@@ -50,8 +50,8 @@
 
       <!-- Selected Item detail card -->
 
-      <a-entity id="title" position="1 5.5 0" text="text: Product : Yellow Shirt" scale="0.5 0.5 0.5" rotation="0 315 0" color="#f4f442"></a-entity>
-      <a-entity id="desc"		position="1 5 0"	text="text: Description : Apparently the color of happiness and lemons" scale="0.5 0.5 0.5"	rotation="0 315 0"></a-entity>
+      <a-entity id="title" position="1 5.5 0" text="text: Product : Yellow Shirt" scale="0.5 0.5 0.5" rotation="0 315 0"></a-entity>
+      <a-entity id="desc"		position="1 5 0"	text="text: Description : Apparently the color of happiness and lemons" scale="0.3 0.3 0.3"	rotation="0 315 0"></a-entity>
       <a-entity id="price"		position="1 4.5 0"	text="text: Price : $39.99" 			scale="0.5 0.5 0.5"	rotation="0 315 0"></a-entity>
 
       <!-- Sky -->
@@ -60,9 +60,7 @@
       <!-- Camera and Cursor -->
       <a-entity position="0 4 5">
         <a-camera wasd-controls>
-          <a-cursor color="#FF5D00" shader="flat" fuse="false">
-            <a-animation begin="fusing" easing="linear" attribute="scale" fill="backwards" from="0.1 0.1 0.1" to="1 1 1"></a-animation>
-          </a-cursor>
+          <a-cursor color="#FF5D00" shader="flat" fuse="false"></a-cursor>
         </a-camera>
       </a-entity>
 
@@ -72,7 +70,6 @@
 	document.querySelector('#blueshirt').addEventListener('click', function() {
 		activeshirt.setAttribute('src', '#blue');
 		title.setAttribute('text', 'text: Product : Blue Shirt');
-
 		desc.setAttribute('text', 'text: Description : A color shared with the sky and the sea');
 		price.setAttribute('text', 'text: Price : $19.99');
 	});
