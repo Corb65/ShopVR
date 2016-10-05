@@ -50,7 +50,7 @@
 
       <!-- Selected Item detail card -->
 
-      <a-entity id="title"	 	position="1 5.5 0" 	text="text: Product : Yellow Shirt" 	scale="0.5 0.5 0.5"	rotation="0 315 0"></a-entity>
+      <a-entity id="title" position="1 5.5 0" text="text: Product : Yellow Shirt" scale="0.5 0.5 0.5" rotation="0 315 0" color="yellow"></a-entity>
       <a-entity id="desc"		position="1 5 0"	text="text: Description : Apparently the color of happiness and lemons" scale="0.5 0.5 0.5"	rotation="0 315 0"></a-entity>
       <a-entity id="price"		position="1 4.5 0"	text="text: Price : $39.99" 			scale="0.5 0.5 0.5"	rotation="0 315 0"></a-entity>
 
@@ -71,7 +71,7 @@
 	// Blue Methods
 	document.querySelector('#blueshirt').addEventListener('click', function() {
 		activeshirt.setAttribute('src', '#blue');
-		title.setAttribute('text', 'text: Product : Blue Shirt');
+		title.setAttribute('text', 'text: Product : Blue Shirt', 'color' , 'blue');
 		desc.setAttribute('text', 'text: Description : A color shared with the sky and the sea');
 		price.setAttribute('text', 'text: Price : $19.99');
 	});
