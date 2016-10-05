@@ -15,7 +15,7 @@
 <a-scene antialias="true" stats>
 
       <a-assets>
-        <a-asset-item id="whiteshirt" src="assets/dae/shirt.dae">
+        <a-asset-item id="whiteshirt" src="assets/dae/tinyshirt.dae">
         <img id="ground" src="assets/img/wood.jpg">
         <a-mixin id="detailblock" geometry="primitive: box; height: 2.75; width: 5.5; depth: 1" material="standard"></a-mixin>
 
@@ -39,7 +39,7 @@
 
       <a-cone radius-bottom="3" radius-top="2.5" height="1" shader="standard" position="-3.5 0 -6"></a-cone>
 
-      <a-collada-model id="podiumshirt" src="#whiteshirt" position="-3.5 2 -6" scale="0.1 0.1 0.1">
+      <a-collada-model id="podiumshirt" src="#whiteshirt" position="-3.5 2 -6" scale="1 1 1">
       	<a-animation attribute="rotation" dur="10000" fill="forwards" repeat="indefinite" to="0 360 0"></a-animation>
       </a-collada-model>
 
