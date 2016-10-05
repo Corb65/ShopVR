@@ -17,6 +17,8 @@
       <a-assets>
 
         <img id="ground" src="assets/img/wood.jpg">
+        <a-mixin id="detailback" geometry="primitive: box; height: 4; width: 6; depth: 1" material="standard"></a-mixin>
+
         <a-asset-item id="blue" 	src="assets/dae/blue.dae">
         <a-asset-item id="green" 	src="assets/dae/green.dae">
         <a-asset-item id="orange"	src="assets/dae/orange.dae">
@@ -49,6 +51,8 @@
       </a-collada-model>
 
       <!-- Selected Item detail card -->
+
+      <a-entity mixin="detailback" position="1 5.5 1" rotation="0 315 0"></a-entity>
 
       <a-entity id="title" position="1 5.5 0" text="text: Product : Yellow Shirt" scale="0.5 0.5 0.5" rotation="0 315 0"></a-entity>
       <a-entity id="desc"		position="1 5 0"	text="text: Description : Apparently the color of happiness and lemons" scale="0.3 0.3 0.3"	rotation="0 315 0"></a-entity>
