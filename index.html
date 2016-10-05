@@ -39,9 +39,9 @@
 
       <a-cone radius-bottom="3" radius-top="2.5" height="1" shader="standard" position="-3.5 0 -6"></a-cone>
 
-      <!-- <a-collada-model id="podiumshirt" src="#whiteshirt" position="-3.5 2 -6" scale="0.1 0.1 0.1">
+      <a-collada-model id="podiumshirt" src="#whiteshirt" position="-3.5 2 -6" scale="0.1 0.1 0.1">
       	<a-animation attribute="rotation" dur="10000" fill="forwards" repeat="indefinite" to="0 360 0"></a-animation>
-      </a-collada-model> -->
+      </a-collada-model>
 
       <!-- Detail Card One - Top Left-->
 
@@ -66,8 +66,7 @@
       <script>
       	
       	document.querySelector('#chooseblue').addEventListener('click', function() {
-      		this.setAttribute('scale', '0.1 0.1 0.1');
-      		this.setAttribute('position', '-3.5 2 -6');
+      		podiumshirt.setAttribute('src', 'blueshirt');
       	});
 
       </script>
