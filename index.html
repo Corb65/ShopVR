@@ -39,30 +39,37 @@
 
       <a-cone radius-bottom="3" radius-top="2.5" height="1" shader="standard" position="-3.5 0 -6"></a-cone>
 
-      <a-collada-model src="#whiteshirt" position="-3.5 2 -6" scale="0.1 0.1 0.1">
+      <a-collada-model id="podiumshirt" src="#whiteshirt" position="-3.5 2 -6" scale="0.1 0.1 0.1">
       	<a-animation attribute="rotation" dur="10000" fill="forwards" repeat="indefinite" to="0 360 0"></a-animation>
       </a-collada-model>
 
       <!-- Detail Card One - Top Left-->
 
       <a-entity mixin="detailblock" position="2.5 5.5 -2" rotation="0 315 0"></a-entity>
-      			<a-collada-model src="#blueshirt" position="0.5 4.5 -2.5" scale="0.025 0.025 0.025" rotation="0 315 0"></a-collada-model>
+      			<a-collada-model src="#blueshirt" id="chooseblue" position="0.5 4.5 -2.5" scale="0.025 0.025 0.025" rotation="0 315 0"></a-collada-model>
 
       <!-- Detail Card Two - Bottom Left -->
 
       <a-entity mixin="detailblock" position="2.5 2.5 -2" rotation="0 315 0"></a-entity>
-      			<a-collada-model src="#lightgreenshirt" position="0.5 1.75 -2.5" scale="0.025 0.025 0.025" rotation="0 315 0"></a-collada-model>
+      			<a-collada-model src="#lightgreenshirt" id="choosegreen" position="0.5 1.75 -2.5" scale="0.025 0.025 0.025" rotation="0 315 0"></a-collada-model>
 
       <!-- Detail Card Three - Top Right -->
 
       <a-entity mixin="detailblock" position="6.5 5.5 2" rotation="0 315 0"></a-entity>
-      			<a-collada-model src="#redshirt" position="4.5 4.5 1" scale="0.025 0.025 0.025" rotation="0 315 0"></a-collada-model>
+      			<a-collada-model src="#redshirt" id="choosered" position="4.5 4.5 1" scale="0.025 0.025 0.025" rotation="0 315 0"></a-collada-model>
 
       <!-- Detail Card Four - Bottom Right-->
 
       <a-entity mixin="detailblock" position="6.5 2.5 2" rotation="0 315 0"></a-entity>
-      			<a-collada-model src="#yellowshirt" position="4.5 1.75 1" scale="0.025 0.025 0.025" rotation="0 315 0"></a-collada-model>
+      			<a-collada-model src="#yellowshirt" id="chooseyellow" position="4.5 1.75 1" scale="0.025 0.025 0.025" rotation="0 315 0"></a-collada-model>
 
+      <script>
+      	
+      	document.querySelector('#chooseblue').addEventListener('click', function() {
+      		this.setAttribute('scale', '0.5 0.5 0.5');
+      	});
+
+      </script>
 
       <!-- Sky -->
 
