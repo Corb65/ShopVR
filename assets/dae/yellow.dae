@@ -5,8 +5,8 @@
       <author>Blender User</author>
       <authoring_tool>Blender 2.78.0 commit date:2016-09-26, commit time:12:42, hash:4bb1e22</authoring_tool>
     </contributor>
-    <created>2016-10-05T17:12:36</created>
-    <modified>2016-10-05T17:12:36</modified>
+    <created>2016-10-05T17:16:13</created>
+    <modified>2016-10-05T17:16:13</modified>
     <unit name="meter" meter="1"/>
     <up_axis>Z_UP</up_axis>
   </asset>
@@ -114,7 +114,7 @@
               <color sid="ambient">0 0 0 1</color>
             </ambient>
             <diffuse>
-              <color sid="diffuse">0.2337503 0.6392822 0.2306018 1</color>
+              <color sid="diffuse">0.6392822 0.5195867 0.1522901 1</color>
             </diffuse>
             <index_of_refraction>
               <float sid="index_of_refraction">1</float>
@@ -126,7 +126,7 @@
     <effect id="Material_002-effect">
       <profile_COMMON>
         <technique sid="common">
-          <phong>
+          <lambert>
             <emission>
               <color sid="emission">0 0 0 1</color>
             </emission>
@@ -134,18 +134,12 @@
               <color sid="ambient">0 0 0 1</color>
             </ambient>
             <diffuse>
-              <color sid="diffuse">0.003086936 0.03757036 0 1</color>
+              <color sid="diffuse">1 0.6263022 0.2189957 1</color>
             </diffuse>
-            <specular>
-              <color sid="specular">0.25 0.25 0.25 1</color>
-            </specular>
-            <shininess>
-              <float sid="shininess">50</float>
-            </shininess>
             <index_of_refraction>
               <float sid="index_of_refraction">1</float>
             </index_of_refraction>
-          </phong>
+          </lambert>
         </technique>
       </profile_COMMON>
     </effect>

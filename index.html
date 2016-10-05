@@ -15,73 +15,43 @@
 <a-scene antialias="true" stats>
 
       <a-assets>
-        <a-asset-item id="whiteshirt" src="assets/dae/tinynormals.dae">
+
         <img id="ground" src="assets/img/wood.jpg">
-        <a-mixin id="detailblock" geometry="primitive: box; height: 2.75; width: 5.5; depth: 1" material="standard"></a-mixin>
-
-        <!-- <a-asset-item id="blueshirt" src="assets/dae/shirt-blue.dae">
-        <a-asset-item id="greenshirt" src="assets/dae/shirt-light-green.dae">
-        <a-asset-item id="redshirt" src="assets/dae/shirt-red.dae">
-        <a-asset-item id="yellowshirt" src="assets/dae/shirt-yellow.dae"> -->
-
+        <a-asset-item id="blue" 	src="assets/dae/blue.dae">
+        <a-asset-item id="green" 	src="assets/dae/green.dae">
+        <a-asset-item id="orange"	src="assets/dae/orange.dae">
+        <a-asset-item id="purple"	src="assets/dae/purple.dae">
+        <a-asset-item id="red"		src="assets/dae/red.dae">
+        <a-asset-item id="yellow"	src="assets/dae/yellow.dae">
 
       </a-assets>
 
       <!-- Logo Text-->
-
       <a-entity position="1.5 7 -2" text="text: Welcome to ShopVR" rotation="0 315 0" size="2"></a-entity>
 
       <!-- Ground -->
-
       <a-entity geometry="primitive: plane; width: 100;height: 100" rotation="-90 0 0" material="src: #ground; repeat: 20 20;"></a-entity>
 
-      <!-- Item Spotlight Cone and Model -->
+      <!-- Item rack -->
+      <a-collada-model src="#blue" 		id="blueshirt" 		position="-1 2 -4" scale="2 2 2" rotation="0 340 0"></a-collada-model>
+      <a-collada-model src="#green" 	id="greenshirt"		position="-2 2 -4" scale="2 2 2" rotation="0 340 0"></a-collada-model>
+      <a-collada-model src="#orange"	id="orangershirt"	position="-3 2 -4" scale="2 2 2" rotation="0 340 0"></a-collada-model>
+      <a-collada-model src="#purple"	id="purpleshirt"	position="-4 2 -4" scale="2 2 2" rotation="0 340 0"></a-collada-model>
+      <a-collada-model src="#red"		id="redshirt"		position="-5 2 -4" scale="2 2 2" rotation="0 340 0"></a-collada-model>
+      <a-collada-model src="#yellow"	id="yellowshirt"	position="-6 2 -4" scale="2 2 2" rotation="0 340 0"></a-collada-model> 
 
-      <a-cone radius-bottom="3" radius-top="2.5" height="1" shader="standard" position="-3.5 0 -6"></a-cone>
+      <!-- Spotlight Cone -->
+      <a-cone radius-bottom="3" radius-top="2.5" height="1" shader="standard" material="#ground" position="-3.5 0 -6"></a-cone>
 
-      <a-collada-model id="podiumshirt" src="#whiteshirt" position="-3.5 2 -6" scale="3 3 3">
-      	<a-animation attribute="rotation" dur="10000" fill="forwards" repeat="indefinite" to="0 360 0"></a-animation>
+      <!-- Selected item model -->
+      <a-collada-model id="activeshirt" src="#yellowshirt" position="-3.5 2 -6" scale="3 3 3">
+      		<a-animation attribute="rotation" dur="10000" fill="forwards" repeat="indefinite" to="0 360 0"></a-animation>
       </a-collada-model>
 
-      <!-- Detail Card One - Top Left-->
+      <!-- Selected Item detail card -->
 
-      <a-entity mixin="detailblock" position="2.5 5.5 -2" rotation="0 315 0"></a-entity>
-      			<a-collada-model src="#whiteshirt" id="chooseblue" position="0.5 4.5 -2.5" scale="1 1 1" rotation="0 315 0">
-      			</a-collada-model>
 
-      <script>
-      	document.querySelector('#chooseblue').addEventListener('click', function() {
-      		podiumshirt.setAttribute('src', '#blueshirt');
-      	});
-      </script>
-
-      <!-- Detail Card Two - Bottom Left -->
-
-      <a-entity mixin="detailblock" position="2.5 2.5 -2" rotation="0 315 0"></a-entity>
-      			<a-collada-model src="#whiteshirt" id="choosegreen" position="0.5 1.75 -2.5" scale="1 1 1" rotation="0 315 0">
-      			</a-collada-model>
-
-      <script>
-      	document.querySelector('#choosegreen').addEventListener('click', function() {
-      		podiumshirt.setAttribute('src', '#whiteshirt');
-      	});
-      </script>
-
-      <!-- Detail Card Three - Top Right -->
-
-      <a-entity mixin="detailblock" position="6.5 5.5 2" rotation="0 315 0"></a-entity>
-      			<a-collada-model src="#whiteshirt" id="choosered" position="4.5 4.5 1" scale="1 1 1" rotation="0 315 0">
-      			</a-collada-model>
-
-      <script>
-      	document.querySelector('#choosered').addEventListener('click', function() {
-      		podiumshirt.setAttribute('src', '#redshirt');
-      	});
-      </script>
-
-      <!-- Detail Card Four - Bottom Right-->
-
-      <a-entity mixin="detailblock" position="6.5 2.5 2" rotation="0 315 0"></a-entity>
+      <!-- <a-entity mixin="detailblock" position="6.5 2.5 2" rotation="0 315 0"></a-entity>
       			<a-collada-model src="#whiteshirt" id="chooseyellow" position="4.5 1.75 1" scale="1 1 1" rotation="0 315 0">
       			</a-collada-model>
 
@@ -89,14 +59,12 @@
       	document.querySelector('#chooseyellow').addEventListener('click', function() {
       		podiumshirt.setAttribute('src', '#yellowshirt');
       	});
-      </script>
+      </script> -->
 
       <!-- Sky -->
-
       <a-sky color="#CCF5FF"></a-sky>
 
       <!-- Camera and Cursor -->
-
       <a-entity position="0 2 5">
         <a-camera wasd-controls>
           <a-cursor color="#FF5D00" shader="flat" fuse="false">
