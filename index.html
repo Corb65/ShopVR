@@ -9,6 +9,8 @@
     <script src="https://aframe.io/releases/0.3.0/aframe.js"></script>
     <!-- A Frame text geometry component -->
     <script src="https://rawgit.com/ngokevin/aframe-text-component/master/dist/aframe-text-component.min.js"></script>
+    <!-- external JS with click listeners -->
+    <script src="click.js" type="text/javascript"></script>
 
 </head>
 <body>
@@ -54,16 +56,6 @@
       <a-entity id="desc-one"	position="1 5.5 0"	text="text: Description : Yellow, the color of happiness and lemons" scale="0.5 0.5 0.5"	rotation="0 315 0"></a-entity>
       <a-entity id="material"	position="1 5 0"	text="text: Material : Cotton blend" 	scale="0.5 0.5 0.5"	rotation="0 315 0"></a-entity>
       <a-entity id="price"		position="1 4.5 0"	text="text: Price : $39.99" 			scale="0.5 0.5 0.5"	rotation="0 315 0"></a-entity>
-
-      <!-- <a-entity mixin="detailblock" position="6.5 2.5 2" rotation="0 315 0"></a-entity>
-      			<a-collada-model src="#whiteshirt" id="chooseyellow" position="4.5 1.75 1" scale="1 1 1" rotation="0 315 0">
-      			</a-collada-model>
-
-      <script> 
-      	document.querySelector('#chooseyellow').addEventListener('click', function() {
-      		podiumshirt.setAttribute('src', '#yellowshirt');
-      	});
-      </script> -->
 
       <!-- Sky -->
       <a-sky color="#CCF5FF"></a-sky>
