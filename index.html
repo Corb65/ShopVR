@@ -51,8 +51,7 @@
       <!-- Selected Item detail card -->
 
       <a-entity id="title"	 	position="1 6 0" 	text="text: Product : Yellow Shirt" 	scale="0.5 0.5 0.5"	rotation="0 315 0"></a-entity>
-      <a-entity id="desc-one"	position="1 5.5 0"	text="text: Description : Yellow, the color of happiness and lemons" scale="0.5 0.5 0.5"	rotation="0 315 0"></a-entity>
-      <a-entity id="material"	position="1 5 0"	text="text: Material : Cotton blend" 	scale="0.5 0.5 0.5"	rotation="0 315 0"></a-entity>
+      <a-entity id="desc"		position="1 5.5 0"	text="text: Description : Apparently the color of happiness and lemons" scale="0.5 0.5 0.5"	rotation="0 315 0"></a-entity>
       <a-entity id="price"		position="1 4.5 0"	text="text: Price : $39.99" 			scale="0.5 0.5 0.5"	rotation="0 315 0"></a-entity>
 
       <!-- Sky -->
@@ -73,36 +72,48 @@
 	document.querySelector('#blueshirt').addEventListener('click', function() {
 		activeshirt.setAttribute('src', '#blue');
 		title.setAttribute('text', 'text: Product : Blue Shirt');
+		desc.setAttribute('text', 'text: Description : A color shared with the sky and the sea');
+		price.setAttribute('text', 'text: Price : $19.99');
 	});
 
 	// Green Methods
 	document.querySelector('#greenshirt').addEventListener('click', function() {
 		activeshirt.setAttribute('src', '#green');
 		title.setAttribute('text', 'text: Product : Green Shirt');
+		desc.setAttribute('text', 'text: Description : For those who want to blend in with nature');
+		price.setAttribute('text', 'text: Price : $24.99');
 	});
 
 	// Orange Methods
 	document.querySelector('#orangeshirt').addEventListener('click', function() {
 		activeshirt.setAttribute('src', '#orange');
 		title.setAttribute('text', 'text: Product : Orange Shirt');
+		desc.setAttribute('text', 'text: Description : Named after the fruit, or the other way around?');
+		price.setAttribute('text', 'text: Price : $14.99');
 	});
 
 	// Purple Methods
 	document.querySelector('#purpleshirt').addEventListener('click', function() {
 		activeshirt.setAttribute('src', '#purple');
 		title.setAttribute('text', 'text: Product : Purple Shirt');
+		desc.setAttribute('text', 'text: Description : A color associated with royalty, magic, and mystery');
+		price.setAttribute('text', 'text: Price : $29.99');
 	});
 
 	// Red Methods
 	document.querySelector('#redshirt').addEventListener('click', function() {
 		activeshirt.setAttribute('src', '#red');
 		title.setAttribute('text', 'text: Product : Red Shirt');
+		desc.setAttribute('text', 'text: Description : Guaranteed to make you die faster than other shirt colors');
+		price.setAttribute('text', 'text: Price : $9.99');
 	});
 
 	// Yellow Methods
 	document.querySelector('#yellowshirt').addEventListener('click', function() {
 		activeshirt.setAttribute('src', '#yellow');
 		title.setAttribute('text', 'text: Product : Yellow Shirt');
+		desc.setAttribute('text', 'text : Description : Apparently the color of happiness and lemons');
+		price.setAttribute('text', 'text: Price : $39.99');
 	});
 
     </script>
