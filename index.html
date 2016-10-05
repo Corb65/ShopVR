@@ -20,7 +20,7 @@
         <a-mixin id="detailblock" geometry="primitive: box; height: 2.75; width: 5.5; depth: 1" material="standard"></a-mixin>
 
         <a-asset-item id="blueshirt" src="assets/dae/shirt-blue.dae">
-        <a-asset-item id="lightgreenshirt" src="assets/dae/shirt-light-green.dae">
+        <a-asset-item id="greenshirt" src="assets/dae/shirt-light-green.dae">
         <a-asset-item id="redshirt" src="assets/dae/shirt-red.dae">
         <a-asset-item id="yellowshirt" src="assets/dae/shirt-yellow.dae">
 
@@ -46,29 +46,49 @@
       <!-- Detail Card One - Top Left-->
 
       <a-entity mixin="detailblock" position="2.5 5.5 -2" rotation="0 315 0"></a-entity>
-      			<a-collada-model src="#blueshirt" id="chooseblue" position="0.5 4.5 -2.5" scale="0.025 0.025 0.025" rotation="0 315 0"></a-collada-model>
+      			<a-collada-model src="#blueshirt" id="chooseblue" position="0.5 4.5 -2.5" scale="0.025 0.025 0.025" rotation="0 315 0">
+      			</a-collada-model>
+
+      <script>
+      	document.querySelector('#chooseblue').addEventListener('click', function() {
+      		podiumshirt.setAttribute('src', '#blueshirt');
+      	});
+      </script>
 
       <!-- Detail Card Two - Bottom Left -->
 
       <a-entity mixin="detailblock" position="2.5 2.5 -2" rotation="0 315 0"></a-entity>
-      			<a-collada-model src="#lightgreenshirt" id="choosegreen" position="0.5 1.75 -2.5" scale="0.025 0.025 0.025" rotation="0 315 0"></a-collada-model>
+      			<a-collada-model src="#greenshirt" id="choosegreen" position="0.5 1.75 -2.5" scale="0.025 0.025 0.025" rotation="0 315 0">
+      			</a-collada-model>
+
+      <script>
+      	document.querySelector('#choosegreen').addEventListener('click', function() {
+      		podiumshirt.setAttribute('src', '#greenshirt');
+      	});
+      </script>
 
       <!-- Detail Card Three - Top Right -->
 
       <a-entity mixin="detailblock" position="6.5 5.5 2" rotation="0 315 0"></a-entity>
-      			<a-collada-model src="#redshirt" id="choosered" position="4.5 4.5 1" scale="0.025 0.025 0.025" rotation="0 315 0"></a-collada-model>
+      			<a-collada-model src="#redshirt" id="choosered" position="4.5 4.5 1" scale="0.025 0.025 0.025" rotation="0 315 0">
+      			</a-collada-model>
+
+      <script>
+      	document.querySelector('#choosered').addEventListener('click', function() {
+      		podiumshirt.setAttribute('src', '#redshirt');
+      	});
+      </script>
 
       <!-- Detail Card Four - Bottom Right-->
 
       <a-entity mixin="detailblock" position="6.5 2.5 2" rotation="0 315 0"></a-entity>
-      			<a-collada-model src="#yellowshirt" id="chooseyellow" position="4.5 1.75 1" scale="0.025 0.025 0.025" rotation="0 315 0"></a-collada-model>
+      			<a-collada-model src="#yellowshirt" id="chooseyellow" position="4.5 1.75 1" scale="0.025 0.025 0.025" rotation="0 315 0">
+      			</a-collada-model>
 
-      <script>
-      	
-      	document.querySelector('#chooseblue').addEventListener('click', function() {
-      		podiumshirt.setAttribute('src', '#blueshirt');
+      <script> 
+      	document.querySelector('#chooseyellow').addEventListener('click', function() {
+      		podiumshirt.setAttribute('src', '#yellowshirt');
       	});
-
       </script>
 
       <!-- Sky -->
