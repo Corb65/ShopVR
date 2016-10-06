@@ -1,0 +1,127 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>ShopVR via A-Frame</title>
+
+    <!-- Development Version, Uncompressed with Source Maps -->
+    <script src="https://aframe.io/releases/0.3.0/aframe.js"></script>
+    <!-- A Frame text geometry component -->
+    <script src="https://rawgit.com/ngokevin/aframe-text-component/master/dist/aframe-text-component.min.js"></script>
+
+</head>
+<body>
+<a-scene stats>
+
+      <a-assets>
+
+        <img id="ground" src="assets/img/wood.jpg">
+        <a-mixin id="detailback" geometry="primitive: box; height: 4; width: 8.5; depth: 1" material="standard"></a-mixin>
+
+        <a-asset-item id="blueshirt" 	src="assets/dae/blue.dae">
+        <a-asset-item id="greenshirt" 	src="assets/dae/green.dae">
+        <a-asset-item id="orangeshirt"	src="assets/dae/orange.dae">
+        <a-asset-item id="purpleshirt"	src="assets/dae/purple.dae">
+        <a-asset-item id="redshirt"		src="assets/dae/red.dae">
+        <a-asset-item id="yellowshirt"	src="assets/dae/yellow.dae">
+
+        <a-asset-item id="pants" src="assets/dae/pants/pants.dae">
+
+      </a-assets>
+
+      <!-- Logo Text-->
+      <a-entity position="2.5 7.5 0" text="text: Welcome to ShopVR" scale="1 1 1" rotation="0 315 0"></a-entity>
+
+      <!-- Ground -->
+      <a-entity geometry="primitive: plane; width: 100;height: 100" rotation="-90 0 0"></a-entity>
+
+      <!-- Item rack -->
+      <a-collada-model src="#blueshirt" 	id="blue" 		position="-8 2 -2" scale="1.5 1.5 1.5" rotation="0 45 0"></a-collada-model>
+      <a-collada-model src="#greenshirt" 	id="green"		position="-10 2 -1" scale="1.5 1.5 1.5" rotation="0 45 0"></a-collada-model>
+      <a-collada-model src="#orangeshirt"	id="orange"	position="-12 2 0" scale="1.5 1.5 1.5" rotation="0 45 0"></a-collada-model>
+      <a-collada-model src="#purpleshirt"	id="purple"	position="-8 6 -2" scale="1.5 1.5 1.5" rotation="0 45 0"></a-collada-model>
+      <a-collada-model src="#redshirt"		id="red"		position="-10 6 -1" scale="1.5 1.5 1.5" rotation="0 45 0"></a-collada-model>
+      <a-collada-model src="#yellowshirt"	id="yellow"	position="-12 6 0" scale="1.5 1.5 1.5" rotation="0 45 0"></a-collada-model> 
+
+      <!-- Spotlight Cone -->
+      <a-cone radius-bottom="4" radius-top="4" height="2" shader="standard" material="standard" color="brown" position="-2 0 -3"></a-cone>
+
+      <!-- Selected item model -->
+      <a-collada-model id="activeshirt" src="#pants" position="-2 1 -3" scale="4 4 4">
+      		<a-animation attribute="rotation" dur="10000" fill="forwards" repeat="indefinite" to="0 360 0"></a-animation>
+      </a-collada-model>
+
+      <!-- Selected Item detail card -->
+
+      <a-entity mixin="detailback" position="5.5 6.5 1.5" rotation="0 315 0"></a-entity>
+
+      <a-entity id="title" position="2.5 6.5 0" text="text: Product : Yellow Shirt" scale="0.5 0.5 0.5" rotation="0 315 0"></a-entity>
+      <a-entity id="desc" position="2.5 6 0"	text="text: Description : Apparently the color of happiness and lemons" scale="0.3 0.3 0.3"	rotation="0 315 0"></a-entity>
+      <a-entity id="price" position="2.5 5.5 0"	text="text: Price : $39.99" scale="0.5 0.5 0.5"	rotation="0 315 0"></a-entity>
+
+      <!-- Sky -->
+      <a-sky color="#CCF5FF"></a-sky>
+
+      <!-- Camera and Cursor -->
+      <a-entity position="0 5 10">
+        <a-camera wasd-controls>
+          <a-cursor color="#FF5D00" shader="flat" fuse="false"></a-cursor>
+        </a-camera>
+      </a-entity>
+
+    <script>
+
+	// Blue Methods
+	document.querySelector('#blue').addEventListener('click', function() {
+		activeshirt.setAttribute('src', '#blueshirt');
+		title.setAttribute('text', 'text: Product : Blue Shirt');
+		desc.setAttribute('text', 'text: Description : A color shared with the sky and the sea');
+		price.setAttribute('text', 'text: Price : $19.99');
+	});
+
+	// Green Methods
+	document.querySelector('#green').addEventListener('click', function() {
+		activeshirt.setAttribute('src', '#greenshirt');
+		title.setAttribute('text', 'text: Product : Green Shirt');
+		desc.setAttribute('text', 'text: Description : For those who want to blend in with nature');
+		price.setAttribute('text', 'text: Price : $24.99');
+	});
+
+	// Orange Methods
+	document.querySelector('#orange').addEventListener('click', function() {
+		activeshirt.setAttribute('src', '#orangeshirt');
+		title.setAttribute('text', 'text: Product : Orange Shirt');
+		desc.setAttribute('text', 'text: Description : Named after the fruit, or the other way around?');
+		price.setAttribute('text', 'text: Price : $14.99');
+	});
+
+	// Purple Methods
+	document.querySelector('#purple').addEventListener('click', function() {
+		activeshirt.setAttribute('src', '#purpleshirt');
+		title.setAttribute('text', 'text: Product : Purple Shirt');
+		desc.setAttribute('text', 'text: Description : A color associated with royalty, magic, and mystery');
+		price.setAttribute('text', 'text: Price : $29.99');
+	});
+
+	// Red Methods
+	document.querySelector('#red').addEventListener('click', function() {
+		activeshirt.setAttribute('src', '#redshirt');
+		title.setAttribute('text', 'text: Product : Red Shirt');
+		desc.setAttribute('text', 'text: Description : Guaranteed to make you die faster than other shirt colors');
+		price.setAttribute('text', 'text: Price : $9.99');
+	});
+
+	// Yellow Methods
+	document.querySelector('#yellow').addEventListener('click', function() {
+		activeshirt.setAttribute('src', '#yellowshirt');
+		title.setAttribute('text', 'text: Product : Yellow Shirt');
+		desc.setAttribute('text', 'text : Description : Apparently the color of happiness and lemons');
+		price.setAttribute('text', 'text: Price : $39.99');
+	});
+
+    </script>
+
+    </a-scene>
+</body>
+</html>
