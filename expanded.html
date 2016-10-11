@@ -52,12 +52,12 @@
       <a-entity geometry="primitive: plane; width: 100;height: 100" rotation="-90 0 0"></a-entity>
 
       <!-- Item Rack -->
-      <a-collada-model src="#blue-pants" 	id="blue-item" 		position="-7 2 -2" scale="3 3 3" rotation="0 45 0"></a-collada-model>
-      <a-collada-model src="#green-pants" 	id="green-item"		position="-9 2 -1" scale="3 3 3" rotation="0 45 0"></a-collada-model>
-      <a-collada-model src="#orange-pants"	id="orange-item"	position="-11 2 0" scale="3 3 3" rotation="0 45 0"></a-collada-model>
-      <a-collada-model src="#purple-pants"	id="purple-item"	position="-7 6 -2" scale="3 3 3" rotation="0 45 0"></a-collada-model>
-      <a-collada-model src="#red-pants"		id="red-item"		position="-9 6 -1" scale="3 3 3" rotation="0 45 0"></a-collada-model>
-      <a-collada-model src="#yellow-pants"	id="yellow-item"	position="-11 6 0" scale="3 3 3" rotation="0 45 0"></a-collada-model> 
+      <a-collada-model src="#blue-pants" 	id="blueitem" 	position="-7 2 -2" scale="3 3 3" rotation="0 45 0"></a-collada-model>
+      <a-collada-model src="#green-pants" 	id="greenitem"	position="-9 2 -1" scale="3 3 3" rotation="0 45 0"></a-collada-model>
+      <a-collada-model src="#orange-pants"	id="orangeitem"	position="-11 2 0" scale="3 3 3" rotation="0 45 0"></a-collada-model>
+      <a-collada-model src="#purple-pants"	id="purpleitem"	position="-7 6 -2" scale="3 3 3" rotation="0 45 0"></a-collada-model>
+      <a-collada-model src="#red-pants"		id="reditem"	position="-9 6 -1" scale="3 3 3" rotation="0 45 0"></a-collada-model>
+      <a-collada-model src="#yellow-pants"	id="yellowitem"	position="-11 6 0" scale="3 3 3" rotation="0 45 0"></a-collada-model> 
 
       <!-- Spotlight Cone -->
       <a-cone radius-bottom="4" radius-top="4" height="2" shader="standard" material="standard" color="brown" position="-1 0 -3"></a-cone>
@@ -95,32 +95,32 @@
 
     // Pants button methods
     document.querySelector('#pants-button').addEventListener('click', function() {
-    	blue-item.setAttribute('src', '#blue-shirt');
-    	green-item.setAttribute('src', '#green-shirt');
-    	orange-item.setAttribute('src', '#orange-shirt');
-    	purple-item.setAttribute('src', '#purple-shirt');
-    	red-item.setAttribute('src', '#red-shirt');
-    	yellow-item.setAttribute('src', '#yellow-shirt');
+    	blueitem.setAttribute('src', '#blue-shirt');
+    	greenitem.setAttribute('src', '#green-shirt');
+    	orangeitem.setAttribute('src', '#orange-shirt');
+    	purpleitem.setAttribute('src', '#purple-shirt');
+    	reditem.setAttribute('src', '#red-shirt');
+    	yellowitem.setAttribute('src', '#yellow-shirt');
     });
 
     // Shirts button methods
     document.querySelector('#shirts-button').addEventListener('click', function() {
-    	blue-item.setAttribute('src', '#blue-pants');
-    	green-item.setAttribute('src', '#green-pants');
-    	orange-item.setAttribute('src', '#orange-pants');
-    	purple-item.setAttribute('src', '#purple-pants');
-    	red-item.setAttribute('src', '#red-pants');
-    	yellow-item.setAttribute('src', '#yellow-pants');
+    	blueitem.setAttribute('src', '#blue-pants');
+    	greenitem.setAttribute('src', '#green-pants');
+    	orangeitem.setAttribute('src', '#orange-pants');
+    	purpleitem.setAttribute('src', '#purple-pants');
+    	reditem.setAttribute('src', '#red-pants');
+    	yellowitem.setAttribute('src', '#yellow-pants');
     });
 
     // Jackets button methods
     document.querySelector('#jackets-button').addEventListener('click', function() {
-    	blue-item.setAttribute('src', '#blue-jacket');
-    	green-item.setAttribute('src', '#green-jacket');
-    	orange-item.setAttribute('src', '#orange-jacket');
-    	purple-item.setAttribute('src', '#purple-jacket');
-    	red-item.setAttribute('src', '#red-jacket');
-    	yellow-item.setAttribute('src', '#yellow-jacket');
+    	blueitem.setAttribute('src', '#blue-jacket');
+    	greenitem.setAttribute('src', '#green-jacket');
+    	orangeitem.setAttribute('src', '#orange-jacket');
+    	purpleitem.setAttribute('src', '#purple-jacket');
+    	reditem.setAttribute('src', '#red-jacket');
+    	yellowitem.setAttribute('src', '#yellow-jacket');
     });
 
 
