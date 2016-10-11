@@ -35,14 +35,6 @@
         <a-asset-item id="red-shirt"	src="assets/dae/shirts/shirt-red.dae">
         <a-asset-item id="yellow-shirt"	src="assets/dae/shirts/shirt-yellow.dae">
 
-        <!-- Jackets Assets -->
-    	<a-asset-item id="blue-jacket"		src="assets/dae/jackets/jacket-blue.dae">
-    	<a-asset-item id="green-jacket"		src="assets/dae/jackets/jacket-green.dae">
-    	<a-asset-item id="orange-jacket" 	src="assets/dae/jackets/jacket-orange.dae">
-    	<a-asset-item id="purple-jacket"	src="assets/dae/jackets/jacket-purple.dae">
-    	<a-asset-item id="red-jacket"		src="assets/dae/jackets/jacket-red.dae">
-    	<a-asset-item id="yellow-jacket"	src="assets/dae/jackets/jacket-yellow.dae">
-
       </a-assets>
 
       <!-- Logo Text-->
@@ -79,7 +71,6 @@
       <!-- Category Buttons -->
       <a-image src="assets/img/button-pants.PNG" id="pants-button" width="3" height="1.8" position="-5 11 -2" rotation="0 45 0"></a-image>
       <a-image src="assets/img/button-shirts.PNG" id="shirts-button" width="3" height="1.8" position="-9 11 -1" rotation="0 45 0"></a-image>
-      <a-image src="assets/img/button-jackets.PNG" id="jackets-button" width="3" height="1.8" position="-13 11 0" rotation="0 45 0"></a-image>
 
       <!-- Sky -->
       <a-sky color="#CCF5FF"></a-sky>
@@ -93,6 +84,8 @@
 
     <script>
 
+    var itemCategory = "pants";
+
     // Pants button methods
     document.querySelector('#pants-button').addEventListener('click', function() {
     	blueitem.setAttribute('src', '#blue-pants');
@@ -101,6 +94,7 @@
     	purpleitem.setAttribute('src', '#purple-pants');
     	reditem.setAttribute('src', '#red-pants');
     	yellowitem.setAttribute('src', '#yellow-pants');
+    	itemCategory = "pants";
     });
 
     // Shirts button methods
@@ -111,26 +105,24 @@
     	purpleitem.setAttribute('src', '#purple-shirt');
     	reditem.setAttribute('src', '#red-shirt');
     	yellowitem.setAttribute('src', '#yellow-shirt');
+    	itemCategory = "shirts";
     });
-
-    // Jackets button methods
-    document.querySelector('#jackets-button').addEventListener('click', function() {
-    	blueitem.setAttribute('src', '#blue-jacket');
-    	greenitem.setAttribute('src', '#green-jacket');
-    	orangeitem.setAttribute('src', '#orange-jacket');
-    	purpleitem.setAttribute('src', '#purple-jacket');
-    	reditem.setAttribute('src', '#red-jacket');
-    	yellowitem.setAttribute('src', '#yellow-jacket');
-    });
-
 
 	// Blue Item Swap
-	//document.querySelector('#blue').addEventListener('click', function() {
-	//	activeshirt.setAttribute('src', '#blueitem');
-	//	title.setAttribute('text', 'text: Product : Blue Shirt');
-	//	desc.setAttribute('text', 'text: Description : A color shared with the sky and the sea');
-	//	price.setAttribute('text', 'text: Price : $19.99');
-	//});
+	document.querySelector('#blueitem').addEventListener('click', function() {
+		if ( itemCategory = "pants" ){
+
+			activeitem.setAttribute('src', '#blue-pants');
+			title.setAttribute('text', 'text: Product : Blue Pants');
+
+		} 
+		else if ( itemCategory = "shirts" ){
+
+			activeitem.setAttribute('src', '#blue-shirt');
+			title.setAttribute('text', 'text: Product : Blue Shirt');
+
+		}
+	});
 
 	// Green Item Swap
 
