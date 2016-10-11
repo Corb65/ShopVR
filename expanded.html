@@ -19,14 +19,29 @@
         <img id="ground" src="assets/img/wood.jpg">
         <a-mixin id="detailback" geometry="primitive: box; height: 4; width: 8.5; depth: 1" material="standard"></a-mixin>
 
-        <a-asset-item id="blueshirt" 	src="assets/dae/pants/pants.dae">
-        <a-asset-item id="greenshirt" 	src="assets/dae/pants/pants.dae">
-        <a-asset-item id="orangeshirt"	src="assets/dae/pants/pants.dae">
-        <a-asset-item id="purpleshirt"	src="assets/dae/pants/pants.dae">
-        <a-asset-item id="redshirt"		src="assets/dae/pants/pants.dae">
-        <a-asset-item id="yellowshirt"	src="assets/dae/pants/pants.dae">
+        <!-- Pants Assets-->
+        <a-asset-item id="blue-pants" 	src="assets/dae/pants/pants-blue.dae">
+        <a-asset-item id="green-pants" 	src="assets/dae/pants/pants-green.dae">
+        <a-asset-item id="orange-pants"	src="assets/dae/pants/pants-orange.dae">
+        <a-asset-item id="purple-pants"	src="assets/dae/pants/pants-purple.dae">
+        <a-asset-item id="red-pants"	src="assets/dae/pants/pants-red.dae">
+        <a-asset-item id="yellow-pants"	src="assets/dae/pants/pants-yellow.dae">
 
-        <a-asset-item id="pants" src="assets/dae/pants/pants.dae">
+        <!-- Shirts Assets -->
+        <a-asset-item id="blue-shirt"	src="assets/dae/shirts/shirt-blue.dae">
+        <a-asset-item id="green-shirt"	src="assets/dae/shirts/shirt-green.dae">
+        <a-asset-item id="orange-shirt"	src="assets/dae/shirts/shirt-orange.dae">
+        <a-asset-item id="purple-shirt"	src="assets/dae/shirts/shirt-purple.dae">
+        <a-asset-item id="red-shirt"	src="assets/dae/shirts/shirt-red.dae">
+        <a-asset-item id="yellow-shirt"	src="assets/dae/shirts/shirt-yellow.dae">
+
+        <!-- Jackets Assets -->
+    	<a-asset-item id="blue-jacket"		src="assets/dae/jackets/jacket-blue.dae">
+    	<a-asset-item id="green-jacket"		src="assets/dae/jackets/jacket-green.dae">
+    	<a-asset-item id="orange-jacket" 	src="assets/dae/jackets/jacket-orange.dae">
+    	<a-asset-item id="purple-jacket"	src="assets/dae/jackets/jacket-purple.dae">
+    	<a-asset-item id="red-jacket"		src="assets/dae/jackets/jacket-red.dae">
+    	<a-asset-item id="yellow-jacket"	src="assets/dae/jackets/jacket-yellow.dae">
 
       </a-assets>
 
@@ -36,19 +51,19 @@
       <!-- Ground -->
       <a-entity geometry="primitive: plane; width: 100;height: 100" rotation="-90 0 0"></a-entity>
 
-      <!-- Item rack -->
-      <a-collada-model src="#blueshirt" 	id="blue" 		position="-8 2 -2" scale="3 3 3" rotation="0 45 0"></a-collada-model>
-      <a-collada-model src="#greenshirt" 	id="green"		position="-10 2 -1" scale="3 3 3" rotation="0 45 0"></a-collada-model>
-      <a-collada-model src="#orangeshirt"	id="orange"	position="-12 2 0" scale="3 3 3" rotation="0 45 0"></a-collada-model>
-      <a-collada-model src="#purpleshirt"	id="purple"	position="-8 6 -2" scale="3 3 3" rotation="0 45 0"></a-collada-model>
-      <a-collada-model src="#redshirt"		id="red"		position="-10 6 -1" scale="3 3 3" rotation="0 45 0"></a-collada-model>
-      <a-collada-model src="#yellowshirt"	id="yellow"	position="-12 6 0" scale="3 3 3" rotation="0 45 0"></a-collada-model> 
+      <!-- Item Rack -->
+      <a-collada-model src="#blue-pants" 	id="blue-item" 		position="-8 2 -2" scale="3 3 3" rotation="0 45 0"></a-collada-model>
+      <a-collada-model src="#green-pants" 	id="green-item"		position="-10 2 -1" scale="3 3 3" rotation="0 45 0"></a-collada-model>
+      <a-collada-model src="#orange-pants"	id="orange-item"	position="-12 2 0" scale="3 3 3" rotation="0 45 0"></a-collada-model>
+      <a-collada-model src="#purple-pants"	id="purple-item"	position="-8 6 -2" scale="3 3 3" rotation="0 45 0"></a-collada-model>
+      <a-collada-model src="#red-pants"		id="red-item"		position="-10 6 -1" scale="3 3 3" rotation="0 45 0"></a-collada-model>
+      <a-collada-model src="#yellow-pants"	id="yellow-item"	position="-12 6 0" scale="3 3 3" rotation="0 45 0"></a-collada-model> 
 
       <!-- Spotlight Cone -->
       <a-cone radius-bottom="4" radius-top="4" height="2" shader="standard" material="standard" color="brown" position="-2 0 -3"></a-cone>
 
       <!-- Selected item model -->
-      <a-collada-model id="activeshirt" src="#pants" position="-2 1 -3" scale="8 8 8">
+      <a-collada-model id="activeitem" src="#blue-pants" position="-2 1 -3" scale="10 10 10">
       		<a-animation attribute="rotation" dur="10000" fill="forwards" repeat="indefinite" to="0 360 0"></a-animation>
       </a-collada-model>
 
@@ -56,9 +71,12 @@
 
       <a-entity mixin="detailback" position="5.5 6.5 1.5" rotation="0 315 0"></a-entity>
 
-      <a-entity id="title" position="2.5 6.5 0" text="text: Product : Yellow Shirt" scale="0.5 0.5 0.5" rotation="0 315 0"></a-entity>
-      <a-entity id="desc" position="2.5 6 0"	text="text: Description : Apparently the color of happiness and lemons" scale="0.3 0.3 0.3"	rotation="0 315 0"></a-entity>
+      <a-entity id="title" position="2.5 6.5 0" text="text: Product : White Pants" scale="0.5 0.5 0.5" rotation="0 315 0"></a-entity>
+      <a-entity id="desc" position="2.5 6 0"	text="text: Description : Normal Pants, in a normal color" scale="0.3 0.3 0.3"	rotation="0 315 0">
+      </a-entity>
       <a-entity id="price" position="2.5 5.5 0"	text="text: Price : $39.99" scale="0.5 0.5 0.5"	rotation="0 315 0"></a-entity>
+
+      <!-- Category Buttons -->
 
       <!-- Sky -->
       <a-sky color="#CCF5FF"></a-sky>
@@ -72,53 +90,36 @@
 
     <script>
 
-	// Blue Methods
-	document.querySelector('#blue').addEventListener('click', function() {
-		activeshirt.setAttribute('src', '#blueshirt');
-		title.setAttribute('text', 'text: Product : Blue Shirt');
-		desc.setAttribute('text', 'text: Description : A color shared with the sky and the sea');
-		price.setAttribute('text', 'text: Price : $19.99');
-	});
+    // Jacket button methods
 
-	// Green Methods
-	document.querySelector('#green').addEventListener('click', function() {
-		activeshirt.setAttribute('src', '#greenshirt');
-		title.setAttribute('text', 'text: Product : Green Shirt');
-		desc.setAttribute('text', 'text: Description : For those who want to blend in with nature');
-		price.setAttribute('text', 'text: Price : $24.99');
-	});
+    // Pants button methods
 
-	// Orange Methods
-	document.querySelector('#orange').addEventListener('click', function() {
-		activeshirt.setAttribute('src', '#orangeshirt');
-		title.setAttribute('text', 'text: Product : Orange Shirt');
-		desc.setAttribute('text', 'text: Description : Named after the fruit, or the other way around?');
-		price.setAttribute('text', 'text: Price : $14.99');
-	});
+    // Shirts button methods
 
-	// Purple Methods
-	document.querySelector('#purple').addEventListener('click', function() {
-		activeshirt.setAttribute('src', '#purpleshirt');
-		title.setAttribute('text', 'text: Product : Purple Shirt');
-		desc.setAttribute('text', 'text: Description : A color associated with royalty, magic, and mystery');
-		price.setAttribute('text', 'text: Price : $29.99');
-	});
+    // Skirt button methods
 
-	// Red Methods
-	document.querySelector('#red').addEventListener('click', function() {
-		activeshirt.setAttribute('src', '#redshirt');
-		title.setAttribute('text', 'text: Product : Red Shirt');
-		desc.setAttribute('text', 'text: Description : Guaranteed to make you die faster than other shirt colors');
-		price.setAttribute('text', 'text: Price : $9.99');
-	});
+	// Blue Item Swap
+	//document.querySelector('#blue').addEventListener('click', function() {
+	//	activeshirt.setAttribute('src', '#blueitem');
+	//	title.setAttribute('text', 'text: Product : Blue Shirt');
+	//	desc.setAttribute('text', 'text: Description : A color shared with the sky and the sea');
+	//	price.setAttribute('text', 'text: Price : $19.99');
+	//});
 
-	// Yellow Methods
-	document.querySelector('#yellow').addEventListener('click', function() {
-		activeshirt.setAttribute('src', '#yellowshirt');
-		title.setAttribute('text', 'text: Product : Yellow Shirt');
-		desc.setAttribute('text', 'text : Description : Apparently the color of happiness and lemons');
-		price.setAttribute('text', 'text: Price : $39.99');
-	});
+	// Green Item Swap
+
+
+	// Orange Item Swap
+
+
+	// Purple Item Swap
+
+
+	// Red Item Swap
+
+
+	// Yellow Item Swap
+
 
     </script>
 
