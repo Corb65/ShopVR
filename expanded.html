@@ -47,12 +47,17 @@
       <a-entity geometry="primitive: plane; width: 100;height: 100" rotation="-90 0 0" material="src: #ground; repeat: 20 20;"></a-entity>
 
       <!-- Item Rack -->
-      <a-collada-model src="#blue-pants" 	id="blueitem" 	position="-7 2 -3" scale="3 3 3" rotation="0 45 0"></a-collada-model>
-      <a-collada-model src="#green-pants" 	id="greenitem"	position="-9 2 -1" scale="3 3 3" rotation="0 45 0"></a-collada-model>
-      <a-collada-model src="#orange-pants"	id="orangeitem"	position="-11 2 1" scale="3 3 3" rotation="0 45 0"></a-collada-model>
-      <a-collada-model src="#purple-pants"	id="purpleitem"	position="-7 6 -3" scale="3 3 3" rotation="0 45 0"></a-collada-model>
-      <a-collada-model src="#red-pants"		id="reditem"	position="-9 6 -1" scale="3 3 3" rotation="0 45 0"></a-collada-model>
-      <a-collada-model src="#yellow-pants"	id="yellowitem"	position="-11 6 1" scale="3 3 3" rotation="0 45 0"></a-collada-model> 
+      <a-collada-model src="#blue-pants" 	id="blueitem" 	position="-8 2 -3" scale="3 3 3" rotation="0 45 0"></a-collada-model>
+      <a-collada-model src="#green-pants" 	id="greenitem"	position="-10 2 -1" scale="3 3 3" rotation="0 45 0"></a-collada-model>
+      <a-collada-model src="#orange-pants"	id="orangeitem"	position="-12 2 1" scale="3 3 3" rotation="0 45 0"></a-collada-model>
+      <a-collada-model src="#purple-pants"	id="purpleitem"	position="-8 6 -3" scale="3 3 3" rotation="0 45 0"></a-collada-model>
+      <a-collada-model src="#red-pants"		id="reditem"	position="-10 6 -1" scale="3 3 3" rotation="0 45 0"></a-collada-model>
+      <a-collada-model src="#yellow-pants"	id="yellowitem"	position="-12 6 1" scale="3 3 3" rotation="0 45 0"></a-collada-model> 
+
+      <!-- Item rack supports for flavour -->
+      <a-cylinder color="black" height="10" radius="0.1" metalness="1" open-ended="false" position="-14 0 2"></a-cylinder>
+      <a-cylinder color="black" height="10" radius="0.1" metalness="1" open-ended="false" position="-6 0 -4"></a-cylinder>
+
 
       <!-- Spotlight Cone -->
       <a-cone radius-bottom="4" radius-top="4" height="2" shader="standard" material="standard" color="brown" position="-1 0 -3"></a-cone>
@@ -72,8 +77,8 @@
       <a-entity id="price" position="2.5 5.5 0"	text="text: Price : $39.99" scale="0.5 0.5 0.5"	rotation="0 315 0"></a-entity>
 
       <!-- Category Buttons -->
-      <a-image src="assets/img/button-pants.PNG" id="pants-button" width="3" height="1.8" position="-7 11 -2" rotation="0 45 0"></a-image>
-      <a-image src="assets/img/button-shirts.PNG" id="shirts-button" width="3" height="1.8" position="-11 11 0" rotation="0 45 0"></a-image>
+      <a-image src="assets/img/button-pants.PNG" id="pants-button" width="3" height="1.8" position="-8 11 -3" rotation="0 45 0"></a-image>
+      <a-image src="assets/img/button-shirts.PNG" id="shirts-button" width="3" height="1.8" position="-12 11 1" rotation="0 45 0"></a-image>
 
       <!-- Sky -->
       <a-sky color="#CCF5FF"></a-sky>
