@@ -25,7 +25,7 @@
       <a-entity geometry="primitive: plane; width: 100;height: 100" rotation="-90 0 0" material="src: #ground; repeat: 20 20;"></a-entity>
 
       <!-- Shirts Rack -->
-      <a-image src="assets/img/button-shirts.PNG" id="shirts-button" width="3" height="1.8" position="-10 8 1" rotation="0 90 0"></a-image>
+      <a-image src="assets/img/button-shirts.PNG" id="shirts-button" width="3" height="1.8" position="-10 8 2" rotation="0 90 0"></a-image>
       <a-box 	id="blueshirt" 	  position="-10 1 1" scale="1 1 1" color="blue"></a-box>
       <a-box	id="greenshirt"	  position="-10 2 1" scale="1 1 1" color="green"></a-box>
       <a-box	id="orangeshirt"	position="-10 3 1" scale="1 1 1" color="orange"></a-box>
@@ -34,7 +34,7 @@
       <a-box 	id="yellowshirt"	position="-10 6 1" scale="1 1 1" color="yellow"></a-box> 
 
       <!-- Pants Rack -->
-      <a-image src="assets/img/button-pants.PNG" id="pants-button" width="3" height="1.8" position="-3 8 -1" rotation="0 90 0"></a-image>
+      <a-image src="assets/img/button-pants.PNG" id="pants-button" width="3" height="1.8" position="-10 8 -2" rotation="0 90 0"></a-image>
       <a-box  id="bluepants"    position="-10 1 -1" scale="1 1 1" color="blue"></a-box>
       <a-box  id="greenpants"   position="-10 2 -1" scale="1 1 1" color="green"></a-box>
       <a-box  id="orangepants"  position="-10 3 -1" scale="1 1 1" color="orange"></a-box>
@@ -43,15 +43,15 @@
       <a-box  id="yellowpants"  position="-10 6 -1" scale="1 1 1" color="yellow"></a-box> 
 
       <!-- Spotlight Cone -->
-      <a-cone radius-bottom="4" radius-top="4" height="2" shader="standard" material="standard" color="brown" position="0 0 10"></a-cone>
+      <a-cone radius-bottom="4" radius-top="4" height="2" shader="standard" material="standard" color="brown" position="0 0 -10"></a-cone>
 
       <!-- Selected item model -->
-      <a-collada-model id="activeitem" src="assets/dae/pants/pants-red.dae" position="0 4 10" scale="15 15 15">
+      <a-collada-model id="activeitem" src="assets/dae/pants/pants-red.dae" position="0 4 -10" scale="15 15 15">
       		<a-animation attribute="rotation" dur="10000" fill="forwards" repeat="indefinite" to="0 360 0"></a-animation>
       </a-collada-model>
 
       <!-- Information Card -->
-      <a-box    position="10 4 0" height="4" width="8" depth="1" rotation="0 270 0"></a-box>
+      <a-box    position="11 4 0" height="4" width="8" depth="1" rotation="0 270 0"></a-box>
       <a-entity position="10 4 0" text="text: Welcome to ShopVR" scale="1 1 1" rotation="0 270 0"></a-entity>      
       <a-entity position="10 3 0" id="title" text="text: Product : Blue Pants" scale="0.5 0.5 0.5" rotation="0 270 0"></a-entity>
       <a-entity position="10 2 0"  id="price" text="text: Price : $39.99" scale="0.5 0.5 0.5"  rotation="0 270 0"></a-entity>
