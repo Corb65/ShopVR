@@ -18,58 +18,52 @@
 <a-scene stats>
 
       <a-assets>
-
         <img id="ground" src="assets/img/wood.jpg">
-        <a-mixin id="detailback" geometry="primitive: box; height: 4; width: 8.5; depth: 1" material="standard"></a-mixin>
-
       </a-assets>
-
-      <!-- Logo Text-->
-      <a-entity position="2.5 7.5 0" text="text: Welcome to ShopVR" scale="1 1 1" rotation="0 315 0"></a-entity>
 
       <!-- Ground -->
       <a-entity geometry="primitive: plane; width: 100;height: 100" rotation="-90 0 0" material="src: #ground; repeat: 20 20;"></a-entity>
 
-      <!-- Item Rack -->
-      <a-box 	id="bluepants" 	position="-8 2 -3" scale="1 1 1" rotation="0 40 0"></a-box>
-      <a-box	id="greenpants"	position="-10 2 -1" scale="1 1 1" rotation="0 40 0"></a-box>
-      <a-box	id="orangepants"	position="-12 2 1" scale="1 1 1" rotation="0 40 0"></a-box>
-      <a-box	id="purplepants"	position="-8 6 -3" scale="1 1 1" rotation="0 40 0"></a-box>
-      <a-box	id="redpants"	  position="-10 6 -1" scale="1 1 1" rotation="0 40 0"></a-box>
-      <a-box 	id="yellowpants"	position="-12 6 1" scale="1 1 1" rotation="0 40 0"></a-box> 
+      <!-- Shirts Rack -->
+      <a-image src="assets/img/button-shirts.PNG" id="shirts-button" width="3" height="1.8" position="-3 8 1" rotation="0 90 0"></a-image>
+      <a-box 	id="blueshirt" 	  position="-3 1 1" scale="1 1 1" color="blue"></a-box>
+      <a-box	id="greenshirt"	  position="-3 2 1" scale="1 1 1" color="green"></a-box>
+      <a-box	id="orangeshirt"	position="-3 3 1" scale="1 1 1" color="orange"></a-box>
+      <a-box	id="purpleshirt"	position="-3 4 1" scale="1 1 1" color="purple"></a-box>
+      <a-box	id="redshirt"	    position="-3 5 1" scale="1 1 1" color="red"></a-box>
+      <a-box 	id="yellowshirt"	position="-3 6 1" scale="1 1 1" color="yellow"></a-box> 
 
-      <!-- Item rack supports for flavour -->
-      <a-cylinder color="black" height="9" radius="0.1" position="-14 5 2"></a-cylinder>
-      <a-cylinder color="black" height="9" radius="0.1" position="-6 5 -4"></a-cylinder>
-      <a-cylinder color="black" height="10" radius="0.1" position="-10 5.5 -1" rotation="90 307 0"></a-cylinder> 
-      <a-cylinder color="black" height="10" radius="0.1" position="-10 9.5 -1" rotation="90 307 0"></a-cylinder>
+      <!-- Pants Rack -->
+      <a-image src="assets/img/button-pants.PNG" id="pants-button" width="3" height="1.8" position="-3 8 -1" rotation="0 90 0"></a-image>
+      <a-box  id="bluepants"    position="-3 1 -1" scale="1 1 1" color="blue"></a-box>
+      <a-box  id="greenpants"   position="-3 2 -1" scale="1 1 1" color="green"></a-box>
+      <a-box  id="orangepants"  position="-3 3 -1" scale="1 1 1" color="orange"></a-box>
+      <a-box  id="purplepants"  position="-3 4 -1" scale="1 1 1" color="purple"></a-box>
+      <a-box  id="redpants"     position="-3 5 -1" scale="1 1 1" color="red"></a-box>
+      <a-box  id="yellowpants"  position="-3 6 -1" scale="1 1 1" color="yellow"></a-box> 
 
       <!-- Spotlight Cone -->
-      <a-cone radius-bottom="4" radius-top="4" height="2" shader="standard" material="standard" color="brown" position="-1 0 -3"></a-cone>
+      <a-cone radius-bottom="4" radius-top="4" height="2" shader="standard" material="standard" color="brown" position="0 0 3"></a-cone>
 
       <!-- Selected item model -->
-      <a-collada-model id="activeitem" src="assets/dae/pants/pants-red.dae" position="-1 2 -3" scale="10 10 10">
+      <a-collada-model id="activeitem" src="assets/dae/pants/pants-red.dae" position="0 4 3" scale="15 15 15">
       		<a-animation attribute="rotation" dur="10000" fill="forwards" repeat="indefinite" to="0 360 0"></a-animation>
       </a-collada-model>
 
-      <!-- Selected Item detail card -->
-
-      <a-entity mixin="detailback" position="5.5 6.5 1.5" rotation="0 315 0"></a-entity>
-
-      <a-entity id="title" position="2.5 6.5 0" text="text: Product : White Pants" scale="0.5 0.5 0.5" rotation="0 315 0"></a-entity>
-      <a-entity id="desc" position="2.5 6 0"	text="text: Description : Normal Pants, in a normal color" scale="0.3 0.3 0.3"	rotation="0 315 0">
+      <!-- Information Card -->
+      <a-box    position="3 4 0" height="4" width="8" depth="1" rotation="0 270 0"></a-box>
+      <a-entity position="3 4 0" text="text: Welcome to ShopVR" scale="1 1 1" rotation="0 270 0"></a-entity>      
+      <a-entity position="3 3 0" id="title" text="text: Product : Blue Pants" scale="0.5 0.5 0.5" rotation="0 270 0"></a-entity>
+      <a-entity position="3 2 0"  id="price" text="text: Price : $39.99" scale="0.5 0.5 0.5"  rotation="0 270 0"></a-entity>
+      <a-entity position="3 1 0" id="desc" text="text: Description : Blue Pants! Trendy..." scale="0.3 0.3 0.3"	rotation="0 270 0">
       </a-entity>
-      <a-entity id="price" position="2.5 5.5 0"	text="text: Price : $39.99" scale="0.5 0.5 0.5"	rotation="0 315 0"></a-entity>
 
-      <!-- Category Buttons -->
-      <a-image src="assets/img/button-pants.PNG" id="pants-button" width="3" height="1.8" position="-8 11 -3" rotation="0 40 0"></a-image>
-      <a-image src="assets/img/button-shirts.PNG" id="shirts-button" width="3" height="1.8" position="-12 11 1" rotation="0 40 0"></a-image>
 
       <!-- Sky -->
       <a-sky color="#CCF5FF"></a-sky>
 
       <!-- Camera and Cursor -->
-      <a-entity position="0 5 14">
+      <a-entity position="0 0 0">
         <a-camera wasd-controls>
           <a-cursor color="#FF5D00" shader="flat" fuse="false"></a-cursor>
         </a-camera>
@@ -77,77 +71,9 @@
 
     <script>
 
-    //var itemCategory;
+    // Pants Item Listeners
 
-    // Pants button methods
-    document.querySelector('#pants-button').addEventListener('click', function() {
-    	activeitem.setAttribute('src', 'assets/dae/pants/pants-blue.dae');
-    	blueshirt.setAttribute('id', 'bluepants');
-    	greenshirt.setAttribute('id', 'greenpants');
-    	orangeshirt.setAttribute('id', 'orangepants');
-    	purpleshirt.setAttribute('id', 'purplepants');
-    	redshirt.setAttribute('id', 'redpants');
-    	yellowshirt.setAttribute('id', 'yellowpants');
-    	//itemCategory = "pants";
-    });
-
-    document.querySelector('#shirts-button').addEventListener('click', function() {
-      activeitem.setAttribute('src', 'assets/dae/shirts/shirt-blue.dae');
-      bluepants.setAttribute('id', 'blueshirt');
-      greenpants.setAttribute('id', 'greenshirt');
-      orangepants.setAttribute('id', 'orangeshirt');
-      purplepants.setAttribute('id', 'purpleshirt');
-      redpants.setAttribute('id', 'redshirt');
-      yellowpants.setAttribute('id', 'yellowshirt');
-      //itemCategory = "pants";
-    });
-
-    document.querySelector('#bluepants').addEventListener('click', function() {
-      activeitem.setAttribute('src', 'assets/dae/pants/pants-blue.dae');
-    });
-
-   document.querySelector('#greenpants').addEventListener('click', function() {
-      activeitem.setAttribute('src', 'assets/dae/pants/pants-green.dae');
-    });
-
-    document.querySelector('#blueshirt').addEventListener('click', function() {
-      activeitem.setAttribute('src', 'assets/dae/shirts/shirt-blue.dae');
-    });
-
-    document.querySelector('#greenshirt').addEventListener('click', function() {
-      activeitem.setAttribute('src', 'assets/dae/shirts/shirt-blue.dae');
-    });
-
-
-	// Blue Item Swap
-	// document.querySelector('#blueitem').addEventListener('click', function() {
-	// 	if ( itemCategory = "pants" ){
-
-	// 		activeitem.setAttribute('src', '#blue-pants');
-	// 		title.setAttribute('text', 'text: Product : Blue Pants');
-
-	// 	} 
-	// 	else if ( itemCategory = "shirts" ){
-
-	// 		activeitem.setAttribute('src', '#blue-shirt');
-	// 		title.setAttribute('text', 'text: Product : Blue Shirt');
-
-	// 	};
-	// });
-
-	// Green Item Swap
-
-
-	// Orange Item Swap
-
-
-	// Purple Item Swap
-
-
-	// Red Item Swap
-
-
-	// Yellow Item Swap
+    // Shirts Item Listeners
 
 
     </script>
