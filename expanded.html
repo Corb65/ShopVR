@@ -87,7 +87,7 @@
 
     <script>
 
-    var itemCategory;
+    //var itemCategory;
 
     // Pants button methods
     document.querySelector('#pants-button').addEventListener('click', function() {
@@ -98,7 +98,7 @@
     	purpleitem.setAttribute('src', '#purple-pants');
     	reditem.setAttribute('src', '#red-pants');
     	yellowitem.setAttribute('src', '#yellow-pants');
-    	itemCategory = "pants";
+    	//itemCategory = "pants";
     });
 
     // Shirts button methods
@@ -110,24 +110,24 @@
     	purpleitem.setAttribute('src', '#purple-shirt');
     	reditem.setAttribute('src', '#red-shirt');
     	yellowitem.setAttribute('src', '#yellow-shirt');
-    	itemCategory = "shirts";
+    	//itemCategory = "shirts";
     });
 
 	// Blue Item Swap
-	document.querySelector('#blueitem').addEventListener('click', function() {
-		if ( itemCategory = "pants" ){
+	// document.querySelector('#blueitem').addEventListener('click', function() {
+	// 	if ( itemCategory = "pants" ){
 
-			activeitem.setAttribute('src', '#blue-pants');
-			title.setAttribute('text', 'text: Product : Blue Pants');
+	// 		activeitem.setAttribute('src', '#blue-pants');
+	// 		title.setAttribute('text', 'text: Product : Blue Pants');
 
-		} 
-		else if ( itemCategory = "shirts" ){
+	// 	} 
+	// 	else if ( itemCategory = "shirts" ){
 
-			activeitem.setAttribute('src', '#blue-shirt');
-			title.setAttribute('text', 'text: Product : Blue Shirt');
+	// 		activeitem.setAttribute('src', '#blue-shirt');
+	// 		title.setAttribute('text', 'text: Product : Blue Shirt');
 
-		};
-	});
+	// 	};
+	// });
 
 	// Green Item Swap
 
