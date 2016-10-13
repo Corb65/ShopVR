@@ -30,8 +30,8 @@
       <a-box id="page3" width="3" height="2" depth="1" color="yellow" position="4 1 -5"></a-box>
 
       <!-- Left  Cone -->
-      <a-cone radius-bottom="4" radius-top="4" height="2" shader="standard" material="standard" color="brown" position="-12 0 -10"></a-cone>
-      <a-collada-model id="item1" src="assets/dae/goodshirts/shirt-blue.dae" position="-12 2 -10" scale="0.15 0.15 0.15">
+      <a-cone radius-bottom="4" radius-top="4" height="2" shader="standard" material="standard" color="brown" position="-10 0 -10"></a-cone>
+      <a-collada-model id="item1" src="assets/dae/goodshirts/shirt-blue.dae" position="-10 2 -10" scale="0.15 0.15 0.15">
       		<a-animation attribute="rotation" dur="10000" fill="forwards" repeat="indefinite" to="0 360 0"></a-animation>
       </a-collada-model>
 
@@ -42,8 +42,8 @@
       </a-collada-model>
 
       <!-- Right  Cone -->
-      <a-cone radius-bottom="4" radius-top="4" height="2" shader="standard" material="standard" color="brown" position="12 0 -10"></a-cone>
-      <a-collada-model id="item3" src="assets/dae/goodshirts/shirt-red.dae" position="12 2 -10" scale="0.15 0.15 0.15">
+      <a-cone radius-bottom="4" radius-top="4" height="2" shader="standard" material="standard" color="brown" position="10 0 -10"></a-cone>
+      <a-collada-model id="item3" src="assets/dae/goodshirts/shirt-red.dae" position="10 2 -10" scale="0.15 0.15 0.15">
           <a-animation attribute="rotation" dur="10000" fill="forwards" repeat="indefinite" to="0 360 0"></a-animation>
       </a-collada-model>
 
@@ -78,19 +78,19 @@
       item1.setAttribute('src', 'assets/dae/goodshirts/shirt-blue.dae');
       item2.setAttribute('src', 'assets/dae/goodshirts/shirt-green.dae');
       item3.setAttribute('src', 'assets/dae/goodshirts/shirt-red.dae');
-    }
+    });
 
     document.querySelector('#page2').addEventListener('click', function() {
       item1.setAttribute('src', 'assets/dae/goodshirts/shirt-green.dae');
       item2.setAttribute('src', 'assets/dae/goodshirts/shirt-yellow.dae');
       item3.setAttribute('src', 'assets/dae/goodshirts/shirt-blue.dae');
-    }
+    });
 
     document.querySelector('#page3').addEventListener('click', function() {
       item1.setAttribute('src', 'assets/dae/goodshirts/shirt-red.dae');
       item2.setAttribute('src', 'assets/dae/goodshirts/shirt-green.dae');
       item3.setAttribute('src', 'assets/dae/goodshirts/shirt-yellow.dae');
-    }
+    });
 
     </script>
 
